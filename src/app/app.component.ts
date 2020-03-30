@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ousia';
+  title:string = 'MyDuka';
+  number1:number=1234;
+  
+  constructor() {
+    this.title.trim();
+    this.number1.toString();
+    
+  }
 }
