@@ -1,0 +1,76 @@
+{
+  "configVersion": 1,
+  "timestamp": 1585563619177,
+  "index": "https://sammykip.github.io/ousia/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://sammykip.github.io/ousia/es2015-polyfills.b0657154bc33c6ff11ae.js",
+        "https://sammykip.github.io/ousia/favicon.ico",
+        "https://sammykip.github.io/ousia/index.html",
+        "https://sammykip.github.io/ousia/main.3795e158c099ca8d27a9.js",
+        "https://sammykip.github.io/ousia/polyfills.8bbb231b43165d65d357.js",
+        "https://sammykip.github.io/ousia/runtime.26209474bfa8dc87a77c.js",
+        "https://sammykip.github.io/ousia/scripts.1790326b49975922cbd1.js",
+        "https://sammykip.github.io/ousia/styles.56b152b3f715394f25be.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://sammykip.github.io/ousia/assets/icons/icon-128x128.png",
+        "https://sammykip.github.io/ousia/assets/icons/icon-144x144.png",
+        "https://sammykip.github.io/ousia/assets/icons/icon-152x152.png",
+        "https://sammykip.github.io/ousia/assets/icons/icon-192x192.png",
+        "https://sammykip.github.io/ousia/assets/icons/icon-384x384.png",
+        "https://sammykip.github.io/ousia/assets/icons/icon-512x512.png",
+        "https://sammykip.github.io/ousia/assets/icons/icon-72x72.png",
+        "https://sammykip.github.io/ousia/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://sammykip.github.io/ousia/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://sammykip.github.io/ousia/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://sammykip.github.io/ousia/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://sammykip.github.io/ousia/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://sammykip.github.io/ousia/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://sammykip.github.io/ousia/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://sammykip.github.io/ousia/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://sammykip.github.io/ousia/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://sammykip.github.io/ousia/es2015-polyfills.b0657154bc33c6ff11ae.js": "0f3ee8ab07e4d632a13acb43b3c8e853cc96887c",
+    "https://sammykip.github.io/ousia/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://sammykip.github.io/ousia/index.html": "685923b3a5aae984ce3aa68092a3e5b6430fd845",
+    "https://sammykip.github.io/ousia/main.3795e158c099ca8d27a9.js": "b76e3b093e142d06c9ce65a31a3969ee5c9af2eb",
+    "https://sammykip.github.io/ousia/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
+    "https://sammykip.github.io/ousia/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://sammykip.github.io/ousia/scripts.1790326b49975922cbd1.js": "1756bfce11c335d9b1ff29cab18f3fa38e4f8c8c",
+    "https://sammykip.github.io/ousia/styles.56b152b3f715394f25be.css": "8677a6abd8204bc34f2c6fe14b4ef943db9830b1"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
