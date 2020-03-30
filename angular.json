@@ -24,9 +24,13 @@
               "src/manifest.json"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/bs/css/bootstrap.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/bs/js/jquery.js",
+              "src/bs/js/bootstrap.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

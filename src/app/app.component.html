@@ -1,19 +1,119 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
-</div>
-<div class="row">
-  <div class="col-md-6">
-    <Label>Name</Label>
-    <input type="text" name="" id="name"/>
-    <button id="output">Say Hello</button>
-    <p id="output"></p>
+<div class="container">
+  <div style="text-align:center ">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
   </div>
-</div>
-<!-- <h2>Here are some links to help you start: </h2>
+  <hr />
+  <div class="row">
+    <h1>inputs</h1>
+    <input type="text" (keyup)="setText($event, $event.keyCode)" #me>
+    <input type="text" (keyup.enter)="onlyEnter()">
+    <p>{{me.value}}</p>
+  </div>
+  <hr>
+  <div class="row">
+    <h1>Kikuyu Pipes</h1>
+    <p>Date: {{date|date }}</p>
+    <p>Short date {{date|date:"shortDate"}}</p>
+    <p>long date {{date|date:"longDate"}}</p>
+    <p>full date {{date|date:"fullDate"|uppercase}}</p>
+    <p>another date {{date|date:dateFormat}}</p>
+    <p>{{'my name is sam'|uppercase}}</p>
+    <p>currency pipe {{cash|currency:'EUR'}}</p>
+    <p>mypipe for my money {{mypipe|multiply:'2'}}</p>
+  </div>
+  <hr />
+  <div class="row">
+    <h1>Attribute directives</h1>
+    <input type="text" name="" id="" Resize="100">
+  </div>
+  <hr />
+  <div class="row">
+    <h1>data from child to parent</h1>
+    <label for="child">Child</label>
+    <guest-details [guest]="guest" (fromChild)="up=$event" #gd></guest-details>
+    <label for="parent">parent</label>
+    <input type="text" name="parent" [value]="up" />
+    <button (click)="gd.fromParent()">Modify names</button>
+  </div>
+  <hr />
+
+  <div class="row">
+    welcome {{guest.firstName}}
+    <p>number of availabe rooms: {{availableRooms}}</p>
+    <p>available rooms from function: {{getAvailableRooms()}}</p>
+    <p>1+6={{1+6}}</p>
+  </div>
+  <div class="row">
+    <p>expressions</p>
+    <input type="text" name="" id="" readonly value="{{getAvailableRooms()}}" />
+    <input type="text" name="" id="" readonly [value]="getAvailableRooms()" />
+    <input type="text" name="" id="" readonly bind-value="getAvailableRooms()" />
+  </div>
+  <hr>
+  <div class="row">
+    <h1>Left to right binding|statements</h1>
+    <button on-click="reserveRoom()">Reserve room</button>
+    <button (click)="reserveRoom()">reserve room</button>
+  </div>
+  <hr>
+  <div class="row">
+    <h1>event objects</h1>
+    <input type="text" name="" id="" (input)="show($event)">
+  </div>
+  <hr>
+  <div class="row">
+    <h1>bindings</h1>
+    <button (click)="reserveRoom()" [disabled]="allBooked()" [style.color]="allBooked()?'red':'blue'">Reserve</button>
+    <input type="text" name="" id="" [value]="availableRooms" (input)="availableRooms=$event.target.value" />
+  </div>
+  <hr>
+  <div class="row">
+    <h3>directives</h3>
+    <div [ngStyle]="styles">Welcome to our hotel</div>
+  </div>
+  <hr>
+  <div class="row">
+    <h3>two way data binding</h3>
+    <button (click)="reserveRoom()" [disabled]="allBooked()" [style.color]="allBooked()?'red':'blue'">Reserve</button>
+    <input type="text" name="" id="" [ngModel]="availableRooms" (ngModelChange)="availableRooms=$event" />
+    <label>Shorhand way</label>
+    <input type="text" name="" id="" [(ngModel)]="availableRooms">
+    <div *ngIf="guest">*ngif directive used when object not null</div>
+    <p>names</p>
+    <ol>
+      <li *ngFor="let guestName of names;let i=index">{{guestName}}:{{i}}</li>
+    </ol>
+    <button (click)="retrieveGuests()">Shw guests</button>
+    <ul>
+      <li *ngFor="let guest of guests;trackBy trackById">{{guest.id}} {{guest.name}}</li>
+    </ul>
+  </div>
+  <hr>
+  <div class="row">
+    <p>switch statement</p>
+    <div [ngSwitch]="guest.surname">
+      <p *ngSwitchCase="'sam'">hes sam</p>
+      <p *ngSwitchCase="'Ahmadi'">he's Ahmadi</p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <Label for="name">Name</Label>
+        <input type="text" name="" class="form-control" #name />
+        <button class="btn btn-primary" (click)="output.innerHTML=name.value">Say Hello</button>
+      </div>
+      <p #output></p>
+
+    </div>
+
+  </div>
+  <!-- <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
@@ -27,3 +127,4 @@
 </ul>
 
 <router-outlet></router-outlet> -->
+</div>

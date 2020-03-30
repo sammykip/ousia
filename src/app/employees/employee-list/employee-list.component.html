@@ -1,0 +1,21 @@
+<table class="table table-condensed table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Full name</th>
+      <th>Code</th>
+      <th>Mobile</th>
+      <th>Position</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of service.list" (click)="RowSelect(emp)" >
+      <td>{{emp.EmployeeID}}</td>
+      <td>{{emp.FullName}}</td>
+      <td>{{emp.EMPCode}}</td>
+      <td>{{emp.Mobile}}</td>
+      <td>{{emp.Position}}</td>
+    </tr>
+  </tbody>
+</table>

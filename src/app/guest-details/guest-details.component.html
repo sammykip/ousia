@@ -1,0 +1,9 @@
+<input type="text" [value]="guest.surname" (input)="sendToParent(surname.value)" #surname>
+
+
+
+<hr>
+<div class="row">
+    <H1>from parent to child</H1>
+    <p>firstName: {{guest.firstName}} \n surname: {{guest.surname}} \n Age: {{guest.age}}</p>
+</div>
