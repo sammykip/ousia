@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Employee } from './employee.model';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs';
-import "rxjs/add/observable/from";
+//import "rxjs/add/observable/from";
 import { Location, LocationStrategy } from '@angular/common';
 
 @Injectable({
@@ -66,7 +66,7 @@ export class EmployeeService {
         console.log(`name: ${key}\t age: ${myTuple[key][0]}\t Married: ${myTuple[key][1]}`);
       }
     }
-    Observable.from(this.list);
+    //Observable.from(this.list);
     console.log(<Number>args[0]);
   }
 }
